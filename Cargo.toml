@@ -1,0 +1,29 @@
+[package]
+name = "rust-benchmarking-and-profiling"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+csv = "1.2.2"
+serde_bytes = "0.11.9"
+dhat = "0.3.2"
+
+[dev-dependencies]
+criterion = { version = "0.5.1", features = ["html_reports"] }
+
+[profile.release]
+incremental = true
+debug = true
+lto = false
+
+[features]
+default = []
+dhat-heap = [] # make sure to turn off lto when using dhat feature
+dhat-ad-hoc = [] # make sure to turn off lto when using dhat feature
+unoptimized = [] # unoptimized version of code
+
+[[bench]]
+name = "benchmark"
+harness = false
