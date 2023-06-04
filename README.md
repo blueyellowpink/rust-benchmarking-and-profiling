@@ -25,7 +25,7 @@ cargo run --release --features dhat-heap,unoptimized # un-optimized version
 ./hyperfine_opt.sh
 ```
 
-## Benchmark with Criterion
+## Micro-benchmark with Criterion
 ```bash
 cargo bench # bench the optimized read_csv function
 cargo bench --features unoptimized # bench the unoptimized read_csv function
