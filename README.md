@@ -85,3 +85,8 @@ cargo run --profile release-dhat --features dhat-heap,unoptimized # DHAT un-opti
 cargo bench # bench the optimized read_csv function
 cargo bench --features unoptimized # bench the unoptimized read_csv function
 ```
+
+## Trace syscall with `strace`
+```bash
+strace target/release/rust-benchmarking-and-profiling
+```
