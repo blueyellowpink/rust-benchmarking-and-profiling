@@ -15,8 +15,16 @@ criterion = { version = "0.5.1", features = ["html_reports"] }
 
 [profile.release]
 incremental = true
+debug = true # debug need to be enable for profiling
+lto = "thin"
+panic = "abort"
+
+[profile.release-dhat]
+inherits = "release"
+incremental = true
 debug = true
 lto = false
+panic = "abort"
 
 [features]
 default = []
