@@ -68,7 +68,7 @@ cargo install hyperfine
 ```
 
 ## Heap memory profiler
-- Bytehound: https://github.com/koute/bytehound
+- Bytehound: https://github.com/koute/bytehound, https://koute.github.io/bytehound/introduction.html
 - Heaptrack: https://github.com/KDE/heaptrack
 
 ## DHAT
